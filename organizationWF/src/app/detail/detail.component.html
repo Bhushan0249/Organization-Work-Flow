@@ -1,0 +1,174 @@
+<app-header></app-header>
+<!--
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 600px">
+        <div class="card-header">
+          <h5>{{ empObj.name }} .( {{ empObj.status }} )</h5>
+          <h5>{{ empObj.department }}</h5>
+         </div>
+         <div class="card-body bg-info">
+          <h6>{{ empObj.mobileno }}</h6>
+          <h6>{{ empObj.country.cname }}</h6>
+         </div>
+
+         <div class="card-footer bg-secondary d-flex justify-content-center">
+          <button routerLink="" class="btn btn-warning">Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="d-flex" style="height: 78vh">
+  <div
+    class="container py-4"
+    style="
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 10px 15px 20px 10px rgb(94, 29, 29);
+    "
+  >
+    <div class="row">
+      <div class="col-lg-4">
+        <div
+          class="card mb-4 d-flex"
+          style="
+            background-color: rgb(223, 209, 189);
+            border-radius: 20px;
+            box-shadow: 5px 5px 20px 5px rgb(59, 58, 61);
+          "
+        >
+          <div class="card-body text-center">
+            <img
+              src="../../assets/profile.png"
+              alt="avatar"
+              class="rounded-circle img-fluid"
+              style="width: 150px"
+            />
+
+            <h4 class="my-3">
+              <u style="color: rgb(87, 56, 0)">{{ empObj.name | uppercase }}</u>
+            </h4>
+            <h6 class="my-3">
+              Employee ID: <b style="color: chocolate">{{ empObj.id }}</b>
+            </h6>
+            <h6 class="mb-3">
+              Department :
+              <b style="color: chocolate">{{ empObj.department }}</b>
+            </h6>
+            <h6 class="mb-3">
+              Status : <b style="color: chocolate">{{ empObj.status }}</b>
+            </h6>
+
+            <h6 class="mb-3">
+              Country : <b>{{ empObj.country.cname }}</b>
+            </h6>
+
+            <div class="d-flex justify-content-center mb-3">
+              <button routerLink="" class="btn btn-primary ms-1">
+                Back To Home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4" style="border-radius: 20px">
+          <div
+            class="card-body"
+            style="
+              background-color: rgb(243, 202, 243);
+              border-radius: 20px;
+              box-shadow: 5px 10px 20px 5px rgb(53, 50, 50);
+            "
+          >
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Employee Name</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">
+                  <b
+                    style="
+                      background-color: DodgerBlue;
+                      color: rgb(255, 255, 255);
+                    "
+                    >{{ empObj.name }}</b
+                  >
+                </h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email-ID</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">{{ empObj.emailid }}</h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mobile</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">{{ empObj.mobileno }}</h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Salary</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">{{ empObj.salary }} /-</h6>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Created By</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">{{ empObj.createdBy }}</h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Created Date</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">{{ empObj.createdDate | date }}</h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Updated By</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">{{ empObj.updatedBy }}</h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Updated Date</p>
+              </div>
+              <div class="col-sm-9">
+                <h6 class="text-muted mb-0">
+                  {{ empObj.updatedDate | date : "M/d/yy, h:mm a" }}
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

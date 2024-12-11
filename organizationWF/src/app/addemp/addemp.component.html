@@ -1,0 +1,163 @@
+<app-header></app-header>
+
+<div class="container h-100" style="margin-top: 10px">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-12 col-xl-11">
+      <div
+        class="card text-black border-5"
+        style="
+          border-radius: 25px;
+          background-color: rgb(230, 228, 225);
+          box-shadow: 20px 14px 20px 10px darkred;
+        "
+      >
+        <div class="card-body p-md-5">
+          <div
+            class="row justify-content-center"
+            style="
+              box-shadow: 10px 15px 15px 3px rgb(51, 14, 51);
+              border-radius: 10px;
+              background-color: antiquewhite;
+              /* height: 59vh; */
+            "
+          >
+            <div class="col-md-3 col-lg-6 col-xl-5 order-2 order-lg-1">
+              <!--  -->
+              <div class="d-flex flex-row align-items-center m-2">
+                <div class="form-outline flex-fill mb-0">
+                  <label for="name" class="form-label"
+                    ><b>Enter Employee Name:</b></label
+                  >
+                  <input
+                    [(ngModel)]="addData.name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Employee Name"
+                  />
+                </div>
+              </div>
+              <!--  -->
+
+              <div class="d-flex flex-row align-items-center m-2">
+                <div
+                  class="form-outline flex-fill mb-0"
+                  style="margin-right: 20px"
+                >
+                  <label class="form-label"><b>Enter Email-id:</b></label>
+                  <input
+                    [(ngModel)]="addData.emailid"
+                    type="email"
+                    class="form-control"
+                    placeholder="Email-id"
+                  />
+                </div>
+                <div class="form-outline flex-fill mb-0">
+                  <label class="form-label"><b>Enter Mobile no:</b></label>
+                  <input
+                    [(ngModel)]="addData.mobileno"
+                    type="text"
+                    class="form-control"
+                    placeholder="Mobile"
+                  />
+                </div>
+              </div>
+              <!--  -->
+              <div class="d-flex flex-row align-items-center m-2">
+                <div
+                  class="form-outline flex-fill mb-0"
+                  style="margin-right: 20px"
+                >
+                  <label class="form-label"><b>Department:</b></label>
+                  <input
+                    [(ngModel)]="addData.department"
+                    type="email"
+                    class="form-control"
+                    placeholder="Department"
+                  />
+                </div>
+                <div class="form-outline flex-fill mb-0">
+                  <label class="form-label"><b>Salary:</b></label>
+                  <input
+                    [(ngModel)]="addData.salary"
+                    type="text"
+                    class="form-control"
+                    placeholder="Salary"
+                  />
+                </div>
+              </div>
+              <!--  -->
+
+              <div class="d-flex flex-row align-items-center m-2">
+                <div
+                  class="form-outline flex-fill mb-0"
+                  style="margin-right: 20px"
+                >
+                  <label for="Status" class="form-label"
+                    ><b>Choose Status:</b></label
+                  >
+                  <br />
+                  <select
+                    [(ngModel)]="addData.status"
+                    class="form-control"
+                    id="Status"
+                  >
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                    <option value="suspend">suspend</option>
+                  </select>
+                </div>
+                <div class="form-outline flex-fill mb-0">
+                  <label for="Country" class="form-label"
+                    ><b>Choose Country:</b></label
+                  >
+                  <br />
+                  <select
+                    [(ngModel)]="addData.country"
+                    class="form-control"
+                    id="Country"
+                  >
+                    <option [ngValue]="item" *ngFor="let item of allCountry">
+                      {{ item.cname }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                <div style="margin-right: 20px">
+                  <button
+                    (click)="onSubmit()"
+                    type="button"
+                    class="btn btn-success"
+                  >
+                    Submit
+                  </button>
+                </div>
+                <!--  -->
+                <div>
+                  <button type="button" class="btn btn-warning" routerLink="">
+                    Home
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-10 col-lg-6 col-xl-6 d-flex align-items-center order-1 order-lg-2"
+            >
+              <img
+                src="../../assets/theKiranAcademy.webp"
+                style="
+                  border-radius: 20px;
+                  box-shadow: 5px 10px 10px 10px rgb(26, 12, 51);
+                "
+                class="img-fluid"
+                alt="fullStackDevloper image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

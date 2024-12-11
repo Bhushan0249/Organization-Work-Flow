@@ -1,0 +1,83 @@
+<app-header></app-header>
+
+<!-- <div class="container-fluid m-3 col-10 mx-auto">
+  <div class="d-grid gap-2">
+    <button routerLink="/addemp" class="btn btn-primary btn-block">
+      Add New Employee Click Here...
+    </button> 
+
+    <button (click)="onUpdate()"   class="btn btn-warning btn-block">
+      update Employee
+    </button>
+    <button (click)="onDelete()"   class="btn btn-warning btn-block">
+      emp delete
+    </button>
+  </div>
+</div> -->
+
+
+
+
+<div class=" text-center " >
+  <button routerLink="/addemp" type="button" class="btn btn-secondary">Add Employee</button>
+  <button (click)="onUpdate()"  type="button" class="btn btn-success">Update Employee</button>
+  <button (click)="onDelete()"   type="button" class="btn btn-danger ">Delete Employee</button>
+</div>
+
+
+
+
+<div
+  class="container-fluid"
+  style="box-shadow: 10px 20px 25px 10px rgb(83, 10, 10)"
+>
+  <table class="table  table-hover">
+    <thead>
+      <tr style="font-family: serif">
+        <th>Sr.No</th>
+        <th>Action</th>
+        <th>Emp Name</th>
+        <th>Status</th>
+        <th>Department</th>
+        <th>Created by</th>
+        <th>Create date</th>
+        <th>Updated date</th>
+        <th>Salary</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="font-family: serif" *ngFor="let item of empData; index as i">
+        <td>{{ i + 1 }}</td>
+
+        <td><input (click)="onRadioClick(item.id)" type="radio" name="record" id=""></td>
+        <td>
+          <a [routerLink]="['detail', item.id]"
+            ><h5>{{ item.name }}</h5></a
+          >
+        </td>
+        <td>
+          <h4>
+            <span
+              [ngClass]="{
+                badge: true,
+                'bg-success': item.status.toLowerCase() == 'active',
+                'bg-warning': item.status.toLowerCase() == 'inactive',
+                'bg-danger': item.status.toLowerCase() == 'suspend'
+              }"
+            >
+              {{ item.status }}</span
+            >
+          </h4>
+        </td>
+        <td>{{ item.department }}</td>
+        <td>{{ item.createdBy }}</td>
+        <td>{{ item.createdDate | date }}</td>
+        <td>{{ item.updatedDate | date : "dd-MM-yy" }}</td>
+        <td>{{ item.salary }}</td>
+        <td>{{ item.country.cname }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
