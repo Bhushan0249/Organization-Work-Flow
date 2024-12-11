@@ -1,0 +1,24 @@
+OrganizationWorkFlow Project
+
+
+Frontend: Angular 16
+Features: String interpolation, two-way data binding, custom pipes.
+
+Components: Home, Add Details (form for CRUD operations), Not Found.
+
+Styling: Bootstrap 5 for responsive UI.
+Integration: Communicates with Spring Boot backend using CORS.
+
+
+Backend: Spring Boot
+Entities:
+Employee (Many-to-One with Country).
+Country (Stores country details).
+
+Technologies: Spring Data JPA, Lombok, MySQL for database management.
+
+Architecture: Database → DAO → Service → Controller → Angular Frontend.
+
+Flow Example:
+A user can add or edit employee details via Angular forms,
+which send requests to backend APIs to perform CRUD operations and update the database.
