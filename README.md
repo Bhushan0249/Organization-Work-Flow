@@ -11,7 +11,7 @@ Demonstrates the implementation of a many-to-one relationship between employees 
 Technologies Used
 
 Backend
-Spring Boot: Framework for developing the backend services.
+Spring Boot: Framework for developing the backend services. 
 Spring Data JPA: Simplifies data access and management.
 Lombok: Reduces boilerplate code for model classes.
 
